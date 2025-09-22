@@ -1,0 +1,107 @@
+/* MOBILE-FIRST APPROACH */
+/* UNIVERSAL */
+
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    font-weight: 800;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+/* CENTERING */
+
+.horizontalcenter{
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.verticalcenter{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* BUTTON STYLING */
+
+.HamburgerMenuON{
+    margin-left: 14vw;
+}
+
+.HamburgerMenuOFF{
+    margin: 7px;
+}
+
+#HamburgerMenu{
+    width: 3rem;
+    height: auto;
+}
+
+/* NAVBAR BACKGROUND AND BUTTON POSITIONING */
+
+#nav-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.nav{
+    height: 100vh;
+    width: 50vw;
+    background-color: #afd5f0;
+    border: 3px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    background-color: #c3eefa;
+    width: 80%;
+    height: 5%;
+    border: 2px solid; border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* DISPLAY OFF (NAVBAR) */
+.navOFF{
+    display: none;
+}
+
+@media (min-width: 768px){
+#nav-wrapper{
+    align-items: start;
+}
+.nav{
+    height: 10vh;
+    width: 100vw;
+    background-color: #afd5f0;
+    border: 3px solid;
+    flex-direction: row;
+}
+
+a{
+    width: 20%;
+    height: 60%;
+}
+
+#HamburgerMenu{
+    display: none;
+}
+
+.navOFF{
+    display: flex;
+}
+}
