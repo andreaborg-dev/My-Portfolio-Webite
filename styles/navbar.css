@@ -61,6 +61,7 @@ body{
     align-items: center;
     justify-content: space-evenly;
     position: absolute;
+    box-shadow: 0 0 10px rgb(73, 73, 73);
 }
 
 a{
@@ -73,7 +74,16 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 10px rgb(73, 73, 73);
+    transform: all 0.2s ease;
 }
+
+a:active {
+    background-color: inherit;  
+    transform: scale(1.05);
+    outline: none;
+}
+
 
 /* DISPLAY OFF (NAVBAR) */
 .navOFF{
