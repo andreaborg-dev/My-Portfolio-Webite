@@ -2,7 +2,7 @@ function SidebarMenuPhone() {
     var icon = document.getElementById("HamburgerMenu")
     var center = document.getElementById("center")
     var navbar = document.getElementById("mainnav")
-    icon.addEventListener("touchstart", function() {
+    icon.addEventListener("click", function() {
         center.classList.toggle("horizontalcenter")
         navbar.classList.toggle("navOFF")
         icon.classList.toggle("HamburgerMenuON")
