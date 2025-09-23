@@ -36,18 +36,12 @@ body{
 
 /* BUTTON STYLING */
 
-.HamburgerMenuON{
-    margin-left: 14vw;
-}
-
-.HamburgerMenuOFF{
-    margin: 7px;
-}
-
 #HamburgerMenu{
     width: 3rem;
     height: auto;
-    cursor: pointer;
+    position: fixed;
+    cursor: pointer; 
+    margin: 7px;
 }
 
 /* NAVBAR BACKGROUND AND BUTTON POSITIONING */
@@ -66,10 +60,12 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     position: absolute;
     box-shadow: 0 0 10px rgb(73, 73, 73);
 }
+
+
 
 button{
     text-decoration: none;
@@ -82,13 +78,20 @@ button{
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px rgb(73, 73, 73);
-    transform: all 0.2s ease;
+    transition: all 0.2s ease;
     cursor: pointer;
+    margin-bottom: auto;
+}
+
+.closediv{
+    display: flex;
+    margin: 0 0 auto auto;
+    padding: 10px;
 }
 
 
 /* DISPLAY OFF (NAVBAR) */
-.navOFF{
+.navOFF , .closeOFF{
     display: none;
 }
 
@@ -102,18 +105,23 @@ button{
     width: 100vw;
     border: 3px solid;
     flex-direction: row;
+    align-items: end;
+    display: flex;
     justify-content: end;
 }
 
 button{
     width: 10%;
     height: 60%;
-    margin: 20px;
+    margin-right: auto;
+    margin-left: 0;
+    margin-top: auto;
 }
 
-button:first-child{
+
+nav button:first-of-type{
     width: 20%;
-    height: 60%;
+    height: 60%;    
     margin-right: auto;
 }
 
@@ -128,5 +136,9 @@ box-shadow:  0 0 10px rgb(148, 148, 148);
 
 .navOFF{
     display: flex;
+}
+
+#close{
+    display: none;
 }
 }
