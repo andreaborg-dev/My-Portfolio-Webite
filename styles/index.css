@@ -1,0 +1,195 @@
+/* UNIVERSAL */
+
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-weight: 800;
+    border: 2px black solid;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../Others/Images/website-background.svg");
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.containerhome{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.maintext{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+    gap: 1em;
+    margin-bottom: 10vh;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.firstmes{
+    font-size: 20px;
+    background-color: #0000007d;
+    backdrop-filter: blur(10px);
+    padding: 5px;
+}
+
+.secondmes{
+    font-size: 15px;
+    width: 90%;
+    text-align: center;
+    background-color: #0000007d;
+    backdrop-filter: blur(10px);
+    padding: 5px;
+}
+
+.firstmes, .secondmes{
+    font-family: professional;
+    color: #ffa200;
+}
+
+.homeimgwrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 80%;
+    flex-direction: column;
+}
+
+.homeimgwrapper img{
+    height: 50%;
+    width: auto;
+}
+
+@font-face {
+    font-family: 'Professional';
+    src: url(../Others/Fonts/DMSerifText-Regular.ttf);
+}
+
+/* CAROUSEL */
+
+.carousel {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    border: 3px solid black;
+    background-color: #0000007d;
+    backdrop-filter: blur(5px);
+}
+
+.track {
+    grid-row: 2;
+    display: flex;
+    width: 425%; /* two groups side by side */
+    animation: scroll 6s linear infinite;
+}
+
+.group {
+    display: flex;
+    gap: 1em;
+    width: 50%; /* each group takes half of track */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card {
+    flex: 0 0 5em;
+    height: 5em;
+    background-color: #013580;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 320px){
+.firstmes{
+    font-size: 17px;
+}    
+
+.track{
+    width: 525%;
+}
+
+.secondmes{
+    font-size: 14px;
+    text-align: center;
+}
+}
+
+@media (min-width: 375px){
+.firstmes{
+    font-size: 17px;
+}    
+
+.track{
+    width: 440%;
+}
+
+.secondmes{
+    font-size: 14px;
+    text-align: center;
+}
+}
+
+@media (min-width: 768px){
+.secondmes{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.firstmes{
+    font-size: 2.5rem;
+}
+
+.maintext{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.carousel {
+    height: 40%;
+}
+
+.track{
+    width: 565%;
+}
+
+.card {
+    flex: 0 0 15em;
+    height: 11em;
+}
+}
+
+@media (min-width: 1024px){
+.card{
+    flex: 0 0 10em;
+    height: 8em;
+}
+}
